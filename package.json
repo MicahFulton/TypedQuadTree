@@ -15,7 +15,7 @@
     "typescript": "1.7.5"
   },
   "scripts": {
-    "pretest": "tsc test/*.ts --module commonjs",
+    "pretest": "tsd install && tsc test/*.ts --module commonjs",
     "test": "mocha"
   }
 }
