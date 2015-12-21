@@ -11,12 +11,15 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "3.4.1",
+    "codecov.io": "0.1.6",
+    "istanbul": "0.4.1",
     "mocha": "2.3.4",
     "tsd": "0.6.5",
     "typescript": "1.7.5"
   },
   "scripts": {
     "pretest": "tsd install && tsc test/*.ts --module commonjs",
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js"
   }
 }
